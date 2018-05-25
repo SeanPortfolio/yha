@@ -1,0 +1,354 @@
+.grid {
+  position: relative;
+  margin: 25px 0;
+}
+
+.grid--no-gutter {
+  margin: 0;
+}
+
+.grid__header {
+  text-align: center;
+  // margin: 20px 0;
+  padding: 10px 0;
+}
+
+.grid__heading {
+  font-size: 46px;
+}
+
+.grid__heading--bubble {
+  font-family: 'museo700';
+  position: relative;
+  background: $orange;
+  display: inline-block;
+  font-size: 17px;
+  padding: 10px 15px;
+  margin: 0 -15px 5px -15px;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 12px 12px 0px 12px;
+    border-style: solid;
+    border-color: $orange transparent transparent transparent;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    @include translateX();
+  }
+}
+
+
+.grid__col {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.grid__col-figure {
+  position: relative;
+  overflow: hidden;
+  width: 100%; 
+}
+
+.gird__col-heading-seconed {
+  font-size: 25px;
+  margin-top: 0px;
+}
+
+.grid__col-details-second {
+  min-height: 150px;
+}
+
+.grid__img-container {
+  position: relative;
+}
+
+.grid__img-container__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.grid__img-container__overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+.grid__col-heading-third {
+  background: rgba(0,0,0, 0.5);
+  height: 100px;
+  padding-top: 30px;
+  left: 0;
+  right: 0;
+  background: rgba(black,.5);
+  color: $white;
+  overflow: hidden;
+  width: 100%;
+  height: 100px;
+  transition: .5s ease;
+}
+
+.grid__img-container:hover {
+
+  .grid__img-container__overlay--title  {
+    color: $green;
+  }
+  .grid__img-container__overlay {
+    height: 100%;
+  }
+
+  .grid__img-container__overlay--desc {
+    display:block;
+  }
+}
+
+.grid__img-container__overlay--title {
+  color: $white;
+}
+
+.grid__img-container__overlay--text {
+  color: $white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include translate();
+  text-align: center;
+}
+
+.grid__img-container__overlay--desc {
+  display: none; 
+}
+
+.grid__block {
+  background: $ultra-light-grey;
+  overflow: hidden;
+  margin-bottom: 20px;
+  min-height: 330px;
+}
+
+.grid__block--img {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.grid__block--des {
+  padding: 20px 25px 25px;
+}
+
+.grid__col-figure-img {
+  width: 100%;
+  backface-visibility: hidden;
+  -webkit-transform: scale(1.1) translateZ(0px);
+  transform: scale(1.1) translateZ(0px);
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
+
+.grid__col-figure-link {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-indent: -9999px;
+  z-index: 3;
+}
+
+.grid__col-inner {
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+.grid__col-inner-fluid {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.grid__col__intro {
+  font-family: 'museo500';
+  font-size: 15px;
+  margin: 10px 0;
+}
+
+.grid__col-details {
+  margin: 15px 0;
+}
+
+
+.grid__col-figcaption {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  top: -webkit-calc(100% - 90px);
+  top: calc(100% - 90px);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  background: rgba($black, 0.5);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.grid__col-figcaption-title,
+.grid__col-figcaption-text {
+  color: #fff;
+  padding: 0 25px;
+  margin: 0;
+  
+}
+
+.grid__col-figcaption-title {
+  position: relative;
+  line-height: 1.4;
+  height: 90px;
+
+  span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include translate();
+  }
+}
+
+.grid__col-figcaption-text {
+  transform: translate3d(0, 30px, 0);
+  opacity: 0;
+  -webkit-transition: all 300ms 100ms ease;
+  transition: all 300ms 100ms ease;
+}
+
+.grid__col-figcaption-title {
+  font-size: 17px;
+  font-family: 'museo700';
+  text-transform: uppercase;
+}
+
+.grid__col-figcaption-orange,
+.grid__col-figcaption-blue,
+.grid__col-figcaption-green,
+.grid__col-figcaption-black {
+  background: graphics-path('sprite.png') no-repeat;
+  width: 193px;
+	height: 193px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'museo700';
+  padding: 10px;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.grid__col-figcaption-blue,
+.grid__col-figcaption-green {
+	height: 189px;
+}
+
+.grid__col-figcaption-orange {
+  background-position: -1px -559px;
+}
+
+.grid__col-figcaption-blue {
+  background-position: -1px -761px;
+}
+
+.grid__col-figcaption-green {
+  background-position: -1px -961px;
+}
+
+.grid__col-figcaption-black {
+  background-position: -1px -1159px;
+}
+
+.grid__col-figcaption-text-fx {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 105px;
+  
+}
+
+// HOVER EFFECTS
+
+.grid__col-figure:hover {
+
+  .grid__col-figure-img {
+    -webkit-transform: scale(1) translateZ(0px);
+    transform: scale(1) translateZ(0px);
+  }
+
+  .grid__col-figcaption {
+    top: 0px;
+  }
+
+  .grid__col-figcaption-text {
+    transform: translate3d(0, -10px, 0);
+    opacity: 1;
+  }
+
+}
+
+.grid__footer {
+  padding: 30px 0;
+  text-align: center;
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .grid__block--des {
+    padding: 10px 25px 30px 30px;
+  }
+
+  .grid__block {
+    min-height: 395px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid__heading--bubble {
+    font-size: 22px;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin: 0 0 5px 0;
+  
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-width: 12px 12px 0px 12px;
+      border-style: solid;
+      border-color: $orange transparent transparent transparent;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      @include translateX();
+    }
+  }
+}

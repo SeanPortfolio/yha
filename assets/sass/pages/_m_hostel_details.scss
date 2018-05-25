@@ -1,0 +1,30 @@
+.is-mobile-device {
+  .main__heading {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px 0 0 0;
+  }
+
+}
+
+.booking-calendar {
+  margin: 0 -15px;
+}
+
+.booking-calendar__iframe {
+  width: 100%;
+  height: 555px;
+  margin: 10px 0;
+}
+
+.logo-list {
+  background: $white;
+  padding: 10px 15px;
+}
+
+.logo-list__link {
+  display: inline-block;
+  max-width: 90px;
+  margin-right: 15px;
+  vertical-align: middle;
+}

@@ -1,0 +1,78 @@
+@charset 'UTF-8';
+
+// 1. CONFIGRATION AND HELPERS
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. VENDORS
+@import
+  'vendor/normalize',
+  'vendor/bootstrap',
+  'vendor/font-awesome',
+  'vendor/flat-icons',
+  'vendor/glyphicons',
+  'vendor/pikaday',
+  'vendor/slick',
+  'vendor/swipebox',
+  'vendor/pikaday';
+
+// 3. BASE CODE
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography',
+  'base/icons',
+  'base/helpers';
+  
+  // 4. COMPONENTS
+  @import
+    'components/tooltip',
+    'components/hr',
+    'components/iframe',
+    'components/blockquote',
+    'components/table',
+    'components/button',
+    'components/banner',
+    'components/carousel',
+    'components/panel',
+    'components/tags',
+    'components/stacked_nav',
+    'components/social',
+    'components/map',
+    'components/article',
+    'components/promo',
+    'components/gallery_slider',
+    'components/list',
+    'components/section',
+    'components/overlay',
+    'components/background',
+    'components/sidebar';
+
+// 5. LAYOUT RELATED CODE
+@import
+  'layout/forms',
+  'layout/header',
+  'layout/navigation',
+  'layout/header_booking_panel',
+  'layout/grid',
+  'layout/booking',
+  'layout/articles',
+  'layout/gallery',
+  'layout/members_registration_form',
+  'layout/pricing_grid',
+  'layout/map',
+  'layout/cart',
+  'layout/footer';
+
+// 6. PAGE-SPECIFIC STYLES
+@import
+  'pages/home',
+  'pages/blog_details',
+  'pages/m_hostel_details',
+  'pages/accordion';
+
+// 7. THEMES
+@import
+  'themes/default';

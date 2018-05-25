@@ -1,0 +1,139 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+.footer {
+  text-align: center;
+}
+
+.footer__upper {
+  background: $black;
+  color: $white;
+  padding: 15px 0;
+}
+
+.footer__newsletter-form p {
+  font-family: 'museo500';
+}
+
+.footer__newsletter-form__fieldset {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.footer__newsletter-form__input {
+  -webkit-border-radius: 50px 0 0 50px;
+  border-radius: 50px 0 0 50px;
+}
+
+.footer__newsletter-form__btn {
+  margin-top: -1px;
+  margin-left: -20px;
+}
+
+.footer__badge {
+  display: block;
+  background: transparent graphics-path('sprite.png') no-repeat 0 -1361px;
+	width: 207px;
+	height: 202px;
+  margin: 15px auto 10px auto;
+}
+
+.footer__social-icons {
+  margin-top: 20px;
+  text-align: center;
+}
+
+// FOOTER LOGIN FORM
+.footer__lower-form-heading {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.nav-accordion--expanded {
+
+  .accordion__item-head-icon {
+      &:before {
+      content: "\f106";
+    }
+  }
+
+  .nav__list {
+    display: block !important;
+  }
+
+  .nav__heading {
+    background-color: $ultra-light-grey;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .footer__newsletter-form__btn {
+    margin-right: 55px;
+  }
+
+  .footer__lower__credits {
+    margin-top: 25px;
+  }
+
+  .nav-accordion {
+
+    .accordion__item-head-icon {
+      margin: -45px 10px 0 15px;
+    }
+
+    .nav__heading {
+      margin-bottom: 0;
+    }
+
+    .nav__list {
+      background-color: $ultra-light-grey;
+      display: none;
+      margin-top: 0 !important;
+    }
+
+    .nav__heading, .nav__list {
+      text-align: left;
+      padding-left: 30px;
+    }
+
+    .nav__link {
+      font-size: 15px;
+    }
+
+    .nav__item {
+      margin-top: 0 !important;
+    }
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  
+  .footer {
+    text-align: left;
+  }
+  
+  .footer__badge {
+    float: right;
+    clear: both;
+  }
+  
+  .footer__social-icons {
+    margin-right: 15px;
+    text-align: right;
+  }
+  
+  .footer__lower__scroll-btn {
+    float: right;
+    margin-top: 25px;
+  }
+  
+  .footer__lower__credits {
+    margin-top: 25px;
+  }
+  
+}
+

@@ -1,0 +1,17 @@
+.header__booking-panel {
+  background: $black;
+  color: $white;
+  position: absolute; 
+  left: 0;
+  top: 100%;
+  width: 100%;
+  padding: 20px 0 10px 0;
+  z-index: 3;
+  
+}
+
+@media screen and (max-width: 767px) {
+  .header__booking-panel .btn--sm {
+    width: 100% !important;
+  }
+}

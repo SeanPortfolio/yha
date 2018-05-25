@@ -1,0 +1,182 @@
+<div class="map__filter">
+  <form action="#" method="post">
+    <div class="map__filter-set">
+      <h5 class="map__filter-heading text-orange">Filter Hostels</h5>
+      <hr class="hr">
+      <ul class="map__filter-list">
+        <li class="map__filter-item">
+          <label class="checkbox-inline text-blue">
+            <input name="toggle-all" value="1" class="checkbox-inline__input toggle-all"
+            type="checkbox" checked>
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fa fa-bed map__filter-item-icon"></i> 
+            <strong>All hostels</strong>
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="snow" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-ski map__filter-item-icon"></i> 
+            Snow
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="surfing" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-waves map__filter-item-icon"></i> 
+            Surfing
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="MountainBiking" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-bike-hire map__filter-item-icon"></i> 
+            Mountain Biking
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="GroupFriendly" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-group-01 map__filter-item-icon"></i> 
+            Group friendly
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="WheelchairAccess" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-wheelchair map__filter-item-icon"></i> 
+            Wheelchair access
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="Familyfriendly" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-group-02 map__filter-item-icon"></i> 
+            Family friendly
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="FreeWifi" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-wifi map__filter-item-icon"></i> 
+            Free Wifi
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="FreeWifi" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-wifi map__filter-item-icon"></i> 
+            Free Wifi 2
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="FreeWifi" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-wifi map__filter-item-icon"></i> 
+            Free Wifi 3
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="FreeWifi" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-wifi map__filter-item-icon"></i> 
+            Free Wifi 4
+          </label>
+        </li>
+
+        <li class="map__filter-item">
+          <label class="checkbox-inline">
+            <input name="hostel-feature[]" value="FreeWifi" class="checkbox-inline__input hostel-feature"
+            type="checkbox">
+            <span class="checkbox-inline__icon"></span> 
+            <i class="fi fi-wifi map__filter-item-icon"></i> 
+            Free Wifi 5
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <div class="map__filter-set">
+      <hr class="hr">
+      <h5 class="map__filter-heading text-green">
+        <label class="checkbox-inline checkbox-inline--default">
+          <input name="local-stories" value="1" class="checkbox-inline__input
+           toggle-local-stories" type="checkbox"> 
+          Local Stories
+        </label>
+      </h5>
+      <hr class="hr">
+    </div>
+
+    <div class="map__filter-set">
+      <h5 class="map__filter-heading text-green">Distance</h5>
+      <div class="form">
+        <div class="form__group form__group--select">
+          <select name="location-from" id="location-from">
+            <option value="">Loading...</option>
+          </select>
+        </div>
+        <div class="form__group form__group--select">
+          <select name="location-to" id="location-to" disabled>
+            <option value="">Loading...</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div id="distance-details" class="map__filter-text-area"></div>
+  </form>
+</div>
+<!-- /.map__filter -->
+
+<script id="option-tmpl" type="text/html">
+<% if (options.length > 0) { %>
+<option value=""><%= defaultLabel %></option>
+<% _.each(options, function(option){ %>
+<option value="<%= option.val %>"><%= option.label %></option>
+<% }) %>
+<% } %>
+</script>
+
+<script id="distance-data-tmpl" type="text/html">
+<% if (data) { %>
+<% if (data.distanceInKms) { %>
+<p>
+  <strong>
+    Distance: 
+    <span class="text-orange"><%= data.distanceInKms %></span>
+  </strong> 
+</p>
+<% } %>
+<%= data.distanceDetails %>
+<% } %>
+</script>

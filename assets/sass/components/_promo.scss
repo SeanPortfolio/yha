@@ -1,0 +1,135 @@
+.promo {
+  position: relative;
+  margin: 25px 0;
+}
+
+.promo__inner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 10px 0;
+}
+
+.promo__inner--no-pattern {
+  background-color: $ultra-light-grey;
+}
+
+@media screen and (max-width: 991px) {
+  .promo__inner {
+    max-width: 433px;
+    height: 204px;
+    margin-left: -15px;
+    margin-right: -15px;
+    text-align: center;
+    padding: 35px 15px;
+  }
+
+  .promo__inner:not(.promo__inner--no-pattern) {
+    background-image: graphics-path('grunge-bg-sm.png');
+  }
+  
+  .promo__amount {
+    color: $green;
+    font-size: 22px;
+    font-family: 'museo900';
+  }
+  
+  .promo__notes {
+    font-size: 22px;
+  }
+  
+  .promo__notes-highlight {
+    display: block;
+    color: $orange;
+    font-family: 'museo900';
+  }
+  
+  .promo__btn {
+    margin-top: 10px;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  
+  .promo__inner {
+    max-width: 758px;
+    width:100%;
+    height: 134px;
+    padding: 25px;
+    background-size: contain;
+  }
+
+  .promo--default {
+    .promo__inner:not(.promo__inner--no-pattern) {
+      background-image: graphics-path('grunge-bg-lg.png');
+    }
+  }
+  
+  .promo__amount,
+  .promo__notes,
+  .promo__btn {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px;
+  }
+  
+  .promo__amount {
+    background: $green;
+    width: 80px;
+    height: 80px;
+    color: $white;
+    font-size: 16px;
+    font-family: 'museo900';
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    padding: 18px 10px;
+    line-height: 21px;
+  }
+  
+  .promo__notes-highlight {
+    color: $orange;
+    font-family: 'museo900';
+  }
+  
+  .promo__amount-value {
+    display: block;
+    font-size: 24px;
+  }
+  
+  .promo__notes {
+    font-size: 20px;
+  }
+  
+  .promo__btn {
+    margin-top: 10px;
+    margin-left: 40px;
+  }
+
+  .promo--md {
+    .promo__inner:not(.promo__inner--no-pattern) {
+      background-image: graphics-path('grunge-bg-md.png');
+    }
+
+    .promo__inner {
+      max-width: 571px;
+      height: 136px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
+    .promo__amount {
+      margin: 0 0 0 -35px;
+    }
+
+    .promo__notes {
+      margin: 0 0 0 5px;
+    }
+
+    .promo__btn {
+      margin-left: 30px;
+    }
+
+  }
+  
+}

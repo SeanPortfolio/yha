@@ -1,0 +1,64 @@
+.hr {
+  display: block;
+  margin: 15px 0;
+}
+
+.hr--default {
+  width: 0px;
+  height: 0px;
+  border-top: 1px solid;
+}
+
+.hr--ctr {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hr--blue,
+.hr--green,
+.hr--orange {
+  width: 75px;
+	height: 6px;
+  background: graphics-path('sprite.png') no-repeat;
+}
+
+.hr--blue {
+  background-position: 0 0;
+}
+
+.hr--green {
+  background-position: 0 -11px;
+}
+
+.hr--orange {
+  background-position: 0 -22px;
+}
+
+.hr--vrt, 
+.hr--vrt-short {
+  background: graphics-path('sprite.png') no-repeat 0 -1571px;
+	width: 5px;
+	height: 361px;
+}
+
+
+.hr--dark {
+  border-top: 1px solid $light-grey;
+}
+
+.hr--label {
+  text-transform:uppercase;
+  background: $gains-boro;
+  border-radius: 40px;
+  padding: 8px 15px;
+  font-size: 12px;
+  vertical-align: top;
+}
+
+.hr--vrt-short {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 250px;
+  border-radius: 45%;
+}

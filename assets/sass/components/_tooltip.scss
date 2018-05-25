@@ -1,0 +1,27 @@
+.tooltip {
+  position: absolute;
+  z-index: 9999;
+  display: block;
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-break: auto;
+  line-height: 1.42857143;
+  text-align: left;
+  text-align: start;
+  text-decoration: none;
+  text-shadow: none;
+  text-transform: none;
+  white-space: normal;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  font-size: 16px;
+  color: $white;
+  background: rgba($black, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'museo700';
+  padding: 5px 10px;
+}

@@ -1,0 +1,63 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  background-image: graphics-path('sprite.png');
+  background-repeat: no-repeat;
+  margin: -3px 3px 0 3px;
+}
+
+.icon--strokes-left {
+  background-position: 0 -73px;
+	width: 28px;
+	height: 29px;
+}
+
+.icon--strokes-right {
+  background-position: 0 -107px;
+	width: 28px;
+	height: 29px;
+}
+
+
+.icon--360 {
+  background-position: 0 -478px;
+  width: 75px;
+  height: 74px;
+}
+
+.icon--green {
+  color: $green;
+}
+
+.icon--compact {
+  margin: 0 55px;
+}
+
+.icon--arrow-left {
+  background: graphics-path('sprite.png') no-repeat 0 -34px;
+  width: 25px;
+  height: 10px;
+}
+
+// STYLES FOR BENEFIT ICONS ON GROUP PARENT PAGE
+
+.circle-bg__icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  vertical-align: middle;
+  padding: 30px;
+  margin: 0 auto;
+  font-size: 35px;
+  color: $white;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.circle-bg__icon--sm {
+  width: 50px;
+  height: 50px;
+  padding: 1px;
+}

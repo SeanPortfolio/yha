@@ -1,0 +1,33 @@
+<div class="col-xs-12 col-md-3 col--compact">
+  <form class="form banner__form" action="#" method="post">
+    <h3 class="form__heading text-center">Book My Hostel <span class="hr hr--ctr hr--orange"></span></h3>
+    <fieldset class="form__fieldset">
+      
+      <div class="form__group form__group--select">
+        <label for="location" class="form__label form__label--sr-only">Location</label>
+        <select class="form__control form__control--trp" name="location" id="location">
+          <option value="">Where do you want to stay?</option>
+          <option value="AKL">Auckland</option>
+          <option value="CHC">Christchurch</option>
+          <option value="WLG">Wellington</option>
+          <option value="ZQN">Queenstown</option>
+        </select>
+      </div>
+      
+      <div class="form__group">
+        <label for="check-in-date" class="form__label form__label--sr-only">Check in date</label>
+        <div class="form__input-group">
+          <input type="text" class="form__control form__control--trp has-datepicker" name="check-in-date" id="check-in-date" placeholder="Check in date">
+          <label for="check-in-date" class="form__input-group-addon"><i class="fa fa-calendar"></i></label>
+        </div>
+      </div>
+      
+      <div class="form__group">
+        <button type="submit" name="check-availability" value="1" class="btn btn--orange btn--hover-green btn--block">Check Availability</button>
+      </div>
+      
+    </fieldset>
+  </form>
+  <!-- /.form -->
+  
+</div>

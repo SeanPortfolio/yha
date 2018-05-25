@@ -1,0 +1,193 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  
+}
+
+body {
+  background-color: $white;
+}
+
+html:not(.is-mobile-device) {
+  body {
+    background: graphics-path("pattern.png") repeat;
+  }
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+::-ms-selection { 
+	background: $blue;
+	color: $white;
+}
+
+::-moz-selection { 
+	background: $blue;
+	color: $white;
+}
+
+::-webkit-selection { 
+	background: $blue;
+	color: $white;
+}
+::selection { 
+	background: $blue;
+	color: $white;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+p {
+  margin: 10px 0;
+}
+
+label[for] {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: 100;
+  font-family: 'museo700';
+}
+
+// Main content
+
+.main {
+  padding: 15px 0;
+
+  p a:not(.link):not(.btn) {
+    color: $orange;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 0%;
+      height: 0px;
+      border-top: 2px solid $green;
+      -webkit-transition: width 200ms ease;
+      -moz-transition: width 200ms ease;
+      -ms-transition: width 200ms ease;
+      -o-transition: width 200ms ease;
+      transition: width 200ms ease;
+
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+  }
+  
+}
+
+// GRID
+.container {
+  max-width: 100%;
+}
+
+.container--compact {
+  padding: 0 5px;
+}
+
+.row--compact {
+  margin: 0 -5px;
+}
+
+.col--compact {
+  padding: 0 5px;
+}
+
+// WELL & JUMBOTRON STYLES
+.well {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background-color: $ultra-light-grey;
+  padding: 10px;
+  margin: 30px 0;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.well--no-gutter {
+  margin: 0px;
+}
+
+.affix {
+  max-width: 360px;
+}
+
+// GENERIC BACKGROUND COLORS
+.bg-orange {
+  background: $orange;
+}
+
+.bg-blue {
+  background: $blue;
+}
+
+.bg-green {
+  background: $green;
+}
+
+.bg-black {
+  background: $black;
+}
+
+.bg-light-grey {
+  background: $light-grey;
+}
+
+.bg-medium-grey {
+  background: $medium-grey;
+}
+
+.bg-ultra-light-grey {
+  background: $ultra-light-grey;
+}
+
+.bg-white-solid {
+  background: $white;
+}
+
+.no-border {
+  border: none !important;
+}
+
+@media screen and (min-width: 768px) {
+  .well{
+    padding: 10px 35px 15px 35px;
+  }
+}

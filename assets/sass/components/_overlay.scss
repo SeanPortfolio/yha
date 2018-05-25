@@ -1,0 +1,44 @@
+.overlay { 
+    height: 100%;
+    width: 100%;
+    position: fixed; 
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.9); 
+    overflow-x: hidden; 
+    transition: 0.5s;
+    display:none;
+}
+
+.overlay__content {
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay .overlay__close {
+    position: absolute;
+    top: 16px;
+    right: 45px;
+    font-size: 30px;
+    z-index: 1;
+    font-weight: 600;
+    color: #fff;
+}
+
+.overlay__iframe {
+    width:100%;
+    height:90vh; 
+}
+
+@media screen and (max-height: 450px) {
+    .overlay .overlay__close {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}

@@ -1,0 +1,115 @@
+[
+  {
+    "id": 1,
+    "title": "Ahipara",
+    "lat": -35.2434749,
+    "lng": 172.9255316,
+    "isGateway": false
+  },
+  {
+    "id": 2,
+    "title": "Bay of Islands Paihia",
+    "lat": -35.2867407,
+    "lng": 174.0600984,
+    "isGateway": false
+  },
+  {
+    "id": 4,
+    "title": "Auckland",
+    "lat": -36.8629409,
+    "lng": 174.7253867,
+    "isGateway": true
+  },
+  {
+    "id": 6,
+    "title": "Opoutere",
+    "lat": -37.09733,
+    "lng": 175.8382654,
+    "isGateway": false
+  },
+  {
+    "id": 7,
+    "title": "Raglan",
+    "lat": -37.8832383,
+    "lng": 174.781534,
+    "isGateway": false
+  },
+  {
+    "id": 8,
+    "title": "Rotorua",
+    "lat": -38.1579891,
+    "lng": 176.2344534,
+    "isGateway": false
+  },
+  {
+    "id": 10,
+    "title": "Napier",
+    "lat": -39.4793037,
+    "lng": 176.7983404,
+    "isGateway": false
+  },
+  {
+    "id": 12,
+    "title": "Taupo",
+    "lat": -38.9596793,
+    "lng": 175.6689389,
+    "isGateway": false
+  },
+  {
+    "id": 13,
+    "title": "National Park",
+    "lat": -39.1732766,
+    "lng": 175.3419654,
+    "isGateway": false
+  },
+  {
+    "id": 14,
+    "title": "Ohakune",
+    "lat": -39.4129352,
+    "lng": 175.3086193,
+    "isGateway": false
+  },
+  {
+    "id": 17,
+    "title": "Picton",
+    "lat": -41.2954758,
+    "lng": 173.9771264,
+    "isGateway": false
+  },
+  
+  {
+    "id": 24,
+    "title": "Hanmer Springs",
+    "lat": -42.5181632,
+    "lng": 172.7580171,
+    "isGateway": false
+  },
+  {
+    "id": 25,
+    "title": "Arthur's Pass",
+    "lat": -42.9425046,
+    "lng": 171.5557791,
+    "isGateway": false
+  },
+  {
+    "id": 30,
+    "title": "Lake Tekapo",
+    "lat": -44.0084419,
+    "lng": 170.4555485,
+    "isGateway": false
+  },
+  {
+    "id": 33,
+    "title": "Queenstown",
+    "lat": -45.0244795,
+    "lng": 168.6568355,
+    "isGateway": true
+  },
+  {
+    "id": 34,
+    "title": "Glenorchy",
+    "lat": -44.8020579,
+    "lng": 168.269187,
+    "isGateway": false
+  }
+]

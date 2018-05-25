@@ -1,0 +1,56 @@
+.tag {
+  display: inline-block;
+  font-family: 'museo700';
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  position: relative;
+  padding: 4px 8px;
+}
+
+.tag--default {
+  background: $white;
+}
+
+.tag--ghost {
+  background: transparent;
+  border: 1px solid inherit;
+}
+
+.tag--selectable {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  @include disable-selection;
+}
+
+.tag--selectable:hover {
+  .tag__label {
+    background: $medium-grey;
+    color: $white;
+    border-color: $medium-grey;
+  }
+}
+
+.tag__label {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid $white;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  color: inherit;
+}
+
+.tag__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tag__input:checked ~ .tag__label {
+  background: $green;
+  border-color: $green;
+  color: $white;
+}

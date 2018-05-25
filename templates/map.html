@@ -1,0 +1,138 @@
+<!-- build:section  layouts.head -->
+<!-- /build -->
+  <!-- build:section recursive layouts.header.layout -->
+  <!-- /build -->
+
+  <main class="main">
+    <div class="map">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <header class="map__header">
+              <h2 class="map__heading text-blue">
+                <span class="icon icon--strokes-left"></span> 
+                explore 
+                <span class="icon icon--strokes-right"></span>
+              </h2>
+              <p class="map__intro">
+                <i class="fi fi-map-pin map__intro-icon"></i>
+                Use our interactive map below to find a hostel 
+                that fits you best!
+              </p>
+              <div class="btn-grp text-right">
+                <a href="#" class="btn btn--green map__filter-toggle-btn">Toggle Filters</a>
+              </div>
+            </header>
+            <div class="map__outer">
+              <!-- build:section map.filter -->
+              <!-- /build -->
+
+              <!-- build:section map.canvas -->
+              <!-- /build -->
+            </div>
+            <!-- /.map__outer -->
+
+          </div>
+        </div>
+      </div>
+
+      <!-- MAP INFOBOX TMPL -->
+      <script id="map-infobox-tmpl" type="text/html">
+        <% if (data) { %>
+        <div class="map__infobox">
+          <i class="fa fa-times map__infobox-close"></i>
+          <div class="map__infobox-inner">
+            <figure class="map__infobox-figure">
+              <img src="<%= data.thumbImgPath %>" alt="<%= data.title %>" class="map__infobox-figure-img">
+            </figure>
+            
+            <div class="map__infobox-content">
+              <h4 class="map__infobox-heading"><%= data.heading %></h4>
+              <div class="map__infobox-details">
+                <p class="text-orange">
+                  <strong>700m from city centre</strong>
+                </p>
+                <ul class="list list--hr">
+                  <li class="list__item">
+                    <i class="fi fi-wifi list__item-icon"></i>
+                  </li>
+                  <li class="list__item">
+                    <i class="fi fi-locker list__item-icon"></i>
+                  </li>
+                  <li class="list__item">
+                    <i class="fi fi-parking-sign list__item-icon"></i>
+                  </li>
+                </ul>
+                <p>
+                  <strong>Per Bed:</strong>
+                  <small>from</small> 
+                  <strong class="text-orange">&#36;20.00</strong>
+                </p>
+                <p>
+                  <strong>Per Room:</strong>
+                  <small>from</small> 
+                  <strong class="text-orange">&#36;40.00</strong>
+                </p>
+              </div>
+            </div>
+
+            <div class="clear"></div>
+          </div>
+          <footer class="map__infobox-footer">
+            <form action="#" method="post" class="form form--hr">
+              <div class="form__input-group">
+                <input class="form__control form__control--ghost has-datepicker" name="check-in" placeholder="Check in date" autocomplete="off" type="text">
+                <label for="check-in-date" class="form__input-group-addon"><i class="fa fa-calendar"></i></label>
+              </div>
+              <button class="btn btn--orange" type="submit" name="check-availability" value="1">Check Availability</button>
+              <div class="clear"></div>
+            </form>
+          </footer>
+        </div>
+        <% } %>
+      </script>
+      <!-- END OF MAP INFOBOX TMPL -->
+      
+      <!-- MAP INVERSE INFOBOX TMPL -->
+      <script id="map-infobox-inverse-tmpl" type="text/html">
+        <% if (data) { %>
+        <div class="map__infobox-inverse">
+          <figure class="map__infobox-inverse-figure">
+            <img src="<%= data.thumbImgPath %>" 
+              alt="<%= data.title %>" class="map__infobox-inverse-figure-img">
+          </figure>
+          <div class="map__infobox-inverse-content">
+            <h4 class="map__infobox-inverse-heading text-green"><%= data.heading %></h4>
+            <p class="map__infobox-inverse-details">
+              <%= data.details %>
+            </p>
+            <p>
+              <a href="<%= data.uri %>" class="link link--blue">FInd out more</a>
+            </p>
+          </div>
+        </div>
+        <% } %>
+      </script>
+      <!-- END OF MAP INVERSE INFOBOX TMPL -->
+
+      <!-- MAP LABEL TMPL -->
+      <script id="map-label-tmpl" type="text/html">
+        <% if (label) { %>
+        <span class="map__label<%= colorCls %>"><%= label %></span>
+        <% } %>
+      </script>
+      <!-- END OF MAP LABEL TMPL -->
+
+    </div>
+    <!-- /.map -->
+  </main>
+  <!-- /.main -->
+
+  <!-- build:section recursive layouts.footer.layout -->
+  <!-- /build -->
+
+  <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCqeRCfbUFp9cDWpnZPu1B8AnNnLCT9ZjQ"></script>
+  <script src="/assets/js/vendor/min/infobox.js"></script>
+
+<!-- build:section  layouts.body -->
+<!-- /build -->

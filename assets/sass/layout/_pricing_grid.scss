@@ -1,0 +1,148 @@
+.price-grid {
+  background-color: $ultra-light-grey;
+  padding: 30px 0;
+  margin-top: 20px;
+}
+
+.price-grid__heading,
+.price-grid__intro {
+  text-align: center;
+}
+
+.price-grid__heading {
+  color: $orange;
+  margin-top: 0;
+}
+
+.price-grid__heading,
+.price-grid__intro,
+.price-grid__table {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.price-grid__table {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.price-grid__table-th,
+.price-grid__table-td {
+  vertical-align: middle;
+  padding: 10px;
+  text-align: center;
+  font-size: 17px;
+  color: $black;
+  
+  &--lg {
+    text-align: left;
+  }
+}
+
+.price-grid__table-th {
+  background: $white;
+  color: $blue;
+  font-weight: 100;
+  font-family: 'museo700';
+
+}
+
+.price-grid__table-td {
+  font-family: 'museo500';
+}
+
+.price-grid__table-na {
+  color: $light-grey;
+}
+
+@media screen and (max-width: 991px) {
+  .price-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .price-grid__table {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .price-grid__table-thead {
+    display: none;
+  }
+
+  .price-grid__table-tr {
+    display: block;
+  }
+
+  .price-grid__table-td:first-child {
+    display: block;
+    width: 100%;
+    background: $white;
+  }
+
+  .price-grid__table-td {
+    width: 50%;
+    display: inline-block;
+    margin-right: -4px;
+    border-bottom: 1px solid #B8B9B7;
+
+    &--lg {
+      border-bottom: none;
+      text-align: center;
+    }
+
+    .visible-xs-block {
+      display: block !important;
+    }
+  }
+
+  .price-grid__table-td--sm-th {
+    color: $blue;
+    border-right: 1px solid #B8B9B7;
+  }
+
+}
+
+@media screen and (min-width: 992px) {
+  .price-grid__table-th,
+  .price-grid__table-td {
+    height: 45px;
+    padding: 10px 20px;
+    border-left: 1px solid #B8B9B7;
+
+    &:first-child {
+      border-left: none;
+    }
+    
+    &--lg {
+      width: 300px;
+    }
+
+    .visible-xs-block {
+      display: inline-block !important;
+    }
+  }
+
+  .price-grid__table-td--sm-th {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .price-grid__table-th,
+  .price-grid__table-td {
+    
+    &--lg {
+      width: 400px;
+    }
+  }
+
+  .price-grid__table-td {
+    border-bottom: 1px solid #B8B9B7;
+  }
+}

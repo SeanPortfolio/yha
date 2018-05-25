@@ -1,0 +1,291 @@
+.map__outer {
+  overflow: hidden;
+  position: relative;
+}
+
+.map__filter {
+  background: $white;
+  padding: 10px 15px;
+  width: 290px;
+  color: $black;
+
+  .hr {
+    border-top-color: $light-grey;
+    margin: 5px 0;
+  }
+
+  .checkbox-inline {
+    font-size: 16px;
+    margin: 0;
+    font-family: 'museo500';
+  }
+}
+
+.map__filter-heading {
+  font-family: 'museo900';
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.map__filter-list {
+  margin: 20px 0;
+  max-height: 295px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 2px;
+    background: $light-grey;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $green; 
+    height: 50px;
+  }
+
+  // &::-webkit-scrollbar-thumb:window-inactive {
+  //   background: rgba(255,0,0,0.4); 
+  // }
+  
+}
+
+.map__filter-item {
+  margin: 5px 0;
+}
+
+.map__filter-item-icon {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: $blue;
+}
+
+.map__filter-text-area {
+  font-size: 15px;
+  line-height: 1.2;
+
+}
+
+.map__icanvas {
+  height: 400px;
+  background: #a3ccff;
+}
+
+.map__icanvas-preloader {
+  color: $black;
+  padding: 10px;
+  margin: 0;
+}
+
+// LABEL
+.map__label {
+  color: $white;
+  font-size: 16px;
+  font-family: "museo700", sans-serif !important;
+  padding: 8px;
+  background-color: rgba($black, 0.7);
+  display: block;
+  width: 170px;
+  text-align: center;
+}
+
+.map__label--grey {
+  color: $black;
+  background-color: rgba(#d7d8d5, 0.5);
+}
+
+// INFO BOX
+.map__infobox {
+  background-color: $white;
+  width: 410px;
+  color: $black;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(#626161, .6);
+  box-shadow: 0px 0px 5px 1px rgba(#626161, .6);
+}
+
+.map__infobox-close {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  color: $medium-grey;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.map__infobox-inner {
+  padding: 20px 10px 20px 25px;
+}
+
+.map__infobox-heading {
+  font-size: 20px;
+  color: $blue;
+  margin: 0;
+}
+
+.map__infobox-details {
+  font-size: 15px !important;
+  line-height: 1.4 !important;
+  font-family: "museo700", sans-serif !important;
+
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+.map__infobox-figure {
+  width: 125px;
+  margin-left: 15px;
+  float: right;
+  margin-top: 15px;
+}
+
+.map__infobox-figure-img {
+  max-width: 100% !important;
+}
+
+.map__infobox-footer {
+  background-color: $black;
+  color: $white;
+  padding: 10px;
+
+  .form {
+    margin: 0;
+  }
+
+  .btn,
+  .form__input-group {
+    float: left;
+    width: 190px;
+    margin-right: -4px;
+  }
+
+  .btn {
+    margin-left: 10px;
+    display: inline-block;
+  }
+
+}
+
+// INVERSE INFO BOX
+.map__infobox-inverse {
+  background-color: $black;
+  color: $white;
+  max-width: 290px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 10px 3px rgba($blue, 0.25);
+}
+
+.map__infobox-inverse-figure-img {
+  max-width: 100% !important;
+}
+
+.map__infobox-inverse-details {
+  font-size: 16px !important;
+  line-height: 1.4 !important;
+  font-family: "museo300", sans-serif !important;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+  .map__filter {
+    position: absolute;
+    left: -100%;
+  }
+
+  .map__outer {
+    margin: 25px -15px;
+  }
+
+  .map__header {
+    .btn-grp {
+      margin-bottom: -15px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 768px) {
+
+  .map__icanvas {
+    height: 550px;
+  }
+
+  // INFO BOX
+  .map__infobox-inverse {
+    max-width: none;
+    width: 450px;
+    padding: 0;
+    text-align: left;
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+
+  .map__infobox-inverse-figure {
+    width: 200px;
+    float: left;
+    // padding-top: 10px;
+
+  }
+
+  .map__infobox-inverse-content {
+    width: 250px;
+    float: left;
+    padding: 10px;
+  }
+
+  .map__infobox-inverse-heading {
+    margin-top: 0;
+  }
+
+}
+
+@media screen and (min-width: 1025px) {
+
+  .map__header {
+    .btn-grp {
+      display: none;
+    }
+  }
+  .map__filter-toggle-btn {
+
+  }
+
+  .map__filter,
+  .map__icanvas {
+    height: 550px;
+    float: left;
+  }
+
+  .map__filter {
+    position: relative;
+  }
+
+  .map__icanvas {
+    width: -moz-calc(100% - 290px);
+    width: -webkit-calc(100% - 290px);
+    width: calc(100% - 290px);
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+  .map__filter,
+  .map__icanvas {
+    height: 700px;
+  }
+}

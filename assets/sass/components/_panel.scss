@@ -1,0 +1,80 @@
+.panel__heading {
+  margin: 0 0 20px 0;
+  font-size: 34px;
+  color: inherit;
+}
+
+.panel__info {
+  
+  font-family: 'museo700';
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+  
+}
+
+.panel--dark {
+  background: $black;
+  color: $white;
+  padding: 15px;
+}
+
+.panel--estimate-info {
+  margin-top: 20px;
+  text-align: center;
+  
+}
+
+.panel__icon {
+  position: absolute;
+  left: 50px;
+  top: -5px;
+  //bottom: 10px;
+}
+
+.panel__feature {
+  position: relative;
+}
+
+.panel__title {
+  line-height: 15px;
+}
+
+.panel__text {
+  display: inline-block;
+  margin-left: 120px;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .panel--estimate-info {
+    margin-top: 45px;
+  }
+}
+
+//Styles for Groups-Parent Page
+
+.panel__bg-black {
+  margin-top: 40px;
+  background: $black;
+  padding-top: 20px;
+  padding-bottom: 35px;
+}
+
+.panel__heading-sm {
+  font-size: 28px;
+}
+
+@media screen and (max-width: 375px) {
+  .panel__btn {
+    min-width: 250px;
+  }
+  .panel__heading-sm {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .panel__btn {
+    min-width: 250px;
+  }
+}

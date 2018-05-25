@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Clear inner floats
+ */
+.clear{
+  clear: both;
+  
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
+}
+
+/**
+ * Hide element
+ */
+.hide{
+	display: none;
+}
+
+/**
+ * Disable element scrolling
+ */
+
+.no-scroll {
+  overflow: hidden !important;
+
+}
+
+/**
+ * Give padding to elements
+ */
+
+.padding {
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+/**
+ * MARGIN HELPERS
+ */
+
+.no-gutter-hr {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.no-gutter-vrt {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.margin {
+  margin-top: 70px;
+}

@@ -1,0 +1,64 @@
+.membership-form {
+  padding: 20px 15px;
+  margin: 20px auto;
+  background: $black;
+  text-align: center;
+}
+
+.membership-form__label {
+  color: $white;
+}
+
+.membership-form__input-group {
+  position: relative;
+  @extend .form__group--select;
+}
+
+.membership-form__control {
+  @extend .form__control;
+  color: $black;
+}
+
+@media screen and (max-width: 991px) {
+
+  .membership-form__input-group {
+    max-width: 400px;
+    margin: 15px auto;
+
+    &:before {
+      color: $black;
+    }
+  }
+
+  .membership-form__control {
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .membership-form__label,
+  .membership-form__input-group,
+  .membership-form__btn {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .membership-form__input-group {
+    margin-left: 15px;
+    width: 270px;
+
+    &:before {
+      right: 40px;
+      color: $black;
+    }
+  }
+
+  .membership-form__control {
+    -webkit-border-radius: 50px 0px 0px 50px;
+    border-radius: 50px 0px 0px 50px;
+    padding-right: 65px;
+
+  }
+
+}

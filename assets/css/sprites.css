@@ -1,0 +1,131 @@
+/*
+Icon classes can be used entirely standalone. They are named after their original file names.
+
+```html
+<!-- `display: block` sprite -->
+<div class="icon-home"></div>
+
+<!-- `display: inline-block` sprite -->
+<img class="icon-home" />
+```
+*/
+.icon-3-lines-left {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -73px;
+  width: 28px;
+  height: 29px;
+}
+.icon-3-lines-right {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -107px;
+  width: 28px;
+  height: 29px;
+}
+.icon-360-icon {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -477px;
+  width: 75px;
+  height: 76px;
+}
+.icon-accent-blue {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px 0px;
+  width: 75px;
+  height: 6px;
+}
+.icon-accent-green {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -11px;
+  width: 75px;
+  height: 6px;
+}
+.icon-accent-orange {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -22px;
+  width: 75px;
+  height: 6px;
+}
+.icon-arrow-green {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -33px;
+  width: 25px;
+  height: 12px;
+}
+.icon-btn-blue-left {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -141px;
+  width: 33px;
+  height: 51px;
+}
+.icon-btn-blue-right {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -197px;
+  width: 52px;
+  height: 51px;
+}
+.icon-btn-green-left {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -253px;
+  width: 33px;
+  height: 51px;
+}
+.icon-btn-green-right {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -309px;
+  width: 52px;
+  height: 51px;
+}
+.icon-btn-orange-left {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -365px;
+  width: 33px;
+  height: 51px;
+}
+.icon-btn-orange-right {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -421px;
+  width: 52px;
+  height: 51px;
+}
+.icon-calendar-icon {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -50px;
+  width: 17px;
+  height: 18px;
+}
+.icon-circle-01-orange {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -558px;
+  width: 195px;
+  height: 195px;
+}
+.icon-circle-02-blue {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -758px;
+  width: 195px;
+  height: 195px;
+}
+.icon-circle-03-green {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -958px;
+  width: 195px;
+  height: 195px;
+}
+.icon-circle-04-black {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -1158px;
+  width: 195px;
+  height: 195px;
+}
+.icon-dream-explore-connect-badge {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -1358px;
+  width: 208px;
+  height: 208px;
+}
+.icon-grey-divider-tall {
+  background-image: url(../../graphics/sprite.png);
+  background-position: 0px -1571px;
+  width: 5px;
+  height: 361px;
+}

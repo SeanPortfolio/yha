@@ -1,0 +1,91 @@
+.list--vertical {
+  margin: 15px -15px; 
+}
+
+.list--vertical .list__item {
+  position: relative;
+  padding: 0 19px;
+  display: block;
+  color: #fff;
+  width: 70%;
+  margin: 0 31px 0 auto;
+  text-align: left;
+}
+
+.list--vertical .list__item-icon {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: -6px;
+  color: $green;
+}
+
+.list--hr {
+  margin: 15px 0;
+
+  .list__item {
+    display: inline-block;
+    padding: 0;
+    margin-right: 3px;
+    
+  }
+
+  .list__item-icon {
+    font-size: 20px;
+    color: $green;
+  }
+}
+
+.list--table {
+  margin: 15px 0;
+}
+
+.list--table .list__item {
+  position: relative;
+  padding: 0 15px 0 30px;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin: 5px -4px 5px 0;
+}
+
+.list--table .list__item-icon {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  color: $blue;
+}
+
+.icon-list {
+  margin: 15px 0;
+}
+
+.icon-list__item {
+  display: block;
+  color: $black;
+  position: relative;
+  padding-left: 25px;
+  font-family: 'museo500';
+  margin: 5px 0;
+}
+
+.icon-list__icon {
+  color: $green;
+  font-size: inherit;
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+
+@media screen and (min-width: 768px) {
+  .list--table .list__item {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .list--table .list__item {
+    width: 33.33%;
+  }
+}

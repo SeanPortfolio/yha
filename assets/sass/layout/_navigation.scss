@@ -1,0 +1,329 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the primary navigation of application
+// -----------------------------------------------------------------------------
+
+.header {
+  @include drop-shadow;
+}
+
+.header__nav-link {
+  font-family: 'museo700';
+  font-size: 17px;
+}
+
+.header__nav-menu {
+  background-color: $black;
+  color: $white;
+  
+  > .container {
+    padding: 0;
+  }
+}
+
+// SUB NAVIGATION
+
+.header__nav-sub-menu-item {
+  display: block;
+}
+
+.header__nav-sub-menu-link {
+  display: block;
+  color: inherit;
+  font-family: 'museo700';
+}
+
+.header__nav-sub-menu-link:hover {
+  color: $blue;
+}
+
+.header__nav-sub-menu .header__nav-sub-menu .header__nav-sub-menu-link {
+  display: inline-block;
+  color: $white;
+  font-size: 15px;
+  font-family: 'museo500';
+  
+  &:hover {
+    color: $green;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .header__nav-toggler {
+    display: inline-block;
+    float: left;
+    color: $black;
+    font-size: 28px;
+    margin-top: 5px;
+    cursor: pointer;
+  }
+  
+  .header__nav-toggler--active .header__nav-toggler__icon:before {
+    content: "\f00d";
+  }
+  
+  .header__nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    text-align: left;
+    height: auto;
+    height: -moz-calc(100vh - 50px);
+    height: -webkit-calc(100vh - 50px);
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    
+  }
+  
+  .header__nav--shown,
+  .header__nav:target {
+    display: block;
+  }
+  
+  .header__nav-item {
+    display: block;
+    
+    &:first-child {
+      padding-top: 44px;
+    }
+    
+    &:last-child {
+      padding-bottom: 44px;
+    }
+  }
+  
+  .header__nav-link {
+    color: $orange;
+    display: inline-block;
+    padding: 10px 10px 6px 10px;
+    display: block;
+    
+    @include on-event {
+      color: $green;
+    };
+  }
+  
+  .header__nav-menu-toggle-icon {
+    display: inline-block;
+    float: right;
+    color: $light-grey;
+    font-size: 22px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background: $medium-grey;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: -2px 0 0 10px;
+    padding-left: 2px;
+    vertical-align: middle;
+    cursor: pointer;
+  
+    @include on-event {
+      color: $light-grey;
+    };
+  }
+  
+  .header__nav-menu-col-pull-vtr {
+    display: none;
+  }
+  
+  // MOBILE SUB NAVIGATION
+  
+  .header__nav-menu,
+  .header__nav-sub-menu .header__nav-sub-menu{
+    -webkit-transform-style: preserve-3d;
+  	transform-style: preserve-3d;
+    position: absolute;
+    background: $black;
+    width: 100%;
+    left: 100%;
+    top: 0;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    height: -moz-calc(100vh - 50px);
+    height: -webkit-calc(100vh - 50px);
+    height: calc(100vh - 50px);
+  }
+  
+  .header__nav-menu {
+    padding: 0;
+    
+    .col-xs-12 {
+      float: none !important;
+      position: initial !important;
+    }
+  }
+  
+  .menu-active {
+    > .header__nav-menu,
+    > .header__nav-sub-menu {
+      left: 0;
+      opacity: 1;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      z-index: 2;
+    }
+  }
+  
+  .header__nav-menu-heading {
+    display: none;
+  }
+  
+  .header__nav-sub-menu-back {
+    display: block;
+    padding: 10px 0;
+    
+    a {
+      font-size: 14px;
+      font-family: 'museo300';
+      color: $light-grey;
+    }
+    
+    i {
+      color: $green;
+      vertical-align: middle;
+      margin: -5px 3px 0 0;
+      font-size: 19px;
+    }
+  }
+  
+  .header__nav-sub-menu {
+    padding: 0 10px;
+  }
+  
+
+  .header__nav-sub-menu-item {
+    padding: 9px 0;
+  }
+
+}
+
+@media screen and (min-width: 767px) {
+  
+  .header__nav-toggler {
+    margin-top: 15px;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  
+  .header__nav-toggler,
+  .header__nav-sub-menu-back,
+  .header__nav-menu-toggle-icon {
+    display: none;
+  }
+  
+  .header__nav {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .header__nav-item {
+    display: inline-block;
+    
+    &:not(:first-child) {
+      margin-left: 15px;
+      margin-right: -4px;
+      
+      .header__nav-link:before {
+        content: "";
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $blue;
+        vertical-align: text-top;
+        margin: 8px 15px 0 0;
+      }
+      
+    }
+    
+  }
+  
+  .header__nav-item--has-menu {
+    position: initial;
+  }
+  
+  .header__nav-link {
+    color: $black;
+    display: block;
+    padding: 23px 0;
+    
+    @include on-event() {
+      color: $green;
+    };
+    
+  }
+  
+  .header__nav-menu {
+    position: absolute; 
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding-bottom: 20px;
+    z-index: 3;
+    text-align: left;
+    display: none;
+  }
+  
+  .header__nav-item--has-menu:hover {
+    .header__nav-menu{
+      display: block;
+    }
+    
+    .header__nav-link{
+      position: relative;
+    }
+    
+    .header__nav-link:after {
+      content: "";
+      width: 0;
+      height: 0px;
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      border-width: 10px;
+      border-style: solid;
+      border-color: $white transparent transparent transparent;
+      @include translateX(-50%);
+      pointer-events: none;
+      z-index: 4;
+    }
+  }
+  
+  .header__nav-menu-heading {
+    text-align: center;
+  }
+  
+  .header__nav-menu-col-pull-vtr {
+    margin-top: -55px;
+    text-align: center;
+  }
+  
+  // SUB NAVIGATION
+  
+  .header__nav-sub-menu-link {
+    display: inline-block;
+  }
+  
+  .header__nav-sub-menu {
+    margin: 5px 0;
+  }
+  
+  .header__nav-sub-menu-item {
+    margin: 8px 0;
+    padding: 0;
+  }
+  
+}

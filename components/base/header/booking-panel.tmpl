@@ -1,0 +1,46 @@
+<div class="header__booking-panel hidden" id="header-booking-panel">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+        <form action="#" class="form form--inline booking-panel" method="post">
+          <fieldset class="form__fieldset">
+            <div class="form__group form__group--select">
+              <select class="form__control form__control--ghost" name="hostel" id="hostel-1">
+                <option value="">Select Hostel</option>
+                <option value="HOSTEL1">Hostel 1</option>
+                <option value="HOSTEL2">Hostel 2</option>
+                <option value="HOSTEL3">Hostel 3</option>
+              </select>
+            </div>
+            
+            <div class="form__group">
+                <label for="check-in-date-1" class="form__label form__label--sr-only">Check in date</label>
+                <div class="form__input-group">
+                  <input type="text" class="form__control form__control--ghost has-datepicker" name="check-in-date" id="check-in-date-1" placeholder="Check in date">
+                  <label for="check-in-date-1" class="form__input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </label>
+                </div>
+            </div>
+  
+            <div class="form__group">
+                <label for="check-out-date-1" class="form__label form__label--sr-only">Check out date</label>
+                <div class="form__input-group">
+                  <input type="text" class="form__control form__control--ghost has-datepicker" name="check-out-date" id="check-out-date-1" placeholder="Check out date">
+                  <label for="check-out-date-1" class="form__input-group-addon"><i class="fa fa-calendar"></i></label>
+                </div>
+            </div>
+  
+            <div class="form__group">
+              <button type="submit" name="check-availability" value="1" 
+                class="btn btn--orange btn--hover-green btn--sm">Check Availability
+              </button>
+            </div>
+  
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.header__booking-panel  -->

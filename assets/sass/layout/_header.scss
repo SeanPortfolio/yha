@@ -1,0 +1,132 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.header {
+  background: #fff;
+  height: 51px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+}
+
+.header-push {
+  height: 51px;
+}
+
+.header__inner {
+  position: relative;
+  padding-left: 15px;
+  text-align: center;
+  height: 100%;
+}
+
+.header__logo {
+  display: block;
+  width: 70px;
+}
+
+.header__cta-btn {
+  float: right;
+  width: 120px;
+  position: relative;
+}
+
+.header__cta-btn--active {
+  
+  &:after {
+    content: "";
+    width: 0;
+    height: 0px;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: $blue transparent transparent transparent;
+    @include translateX(-50%);
+    pointer-events: none;
+    z-index: 4;
+  }
+  
+  @include on-event(true) {
+    background: $blue;
+    color: $white;
+    
+  }
+  
+}
+
+@media screen and (max-width: 991px) {
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 19px;
+    z-index: 2;
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  
+  .header__cta-btn {
+    height: 70px;
+    line-height: 70px;
+    padding: 0 5px;
+  }
+  
+  .header__cta-btn{
+    width: 165px;
+  }
+  
+  .header {
+    height: 70px;
+  }
+  
+  .header-push {
+    height: 70px;
+  }
+  
+  .header__logo {
+    width: 130px;
+    top: 12px;
+  }
+  
+}
+
+@media screen and (min-width: 992px) {
+  
+  .header__inner {
+    margin-left: 4%;
+    position: initial;
+  }
+  
+  .header__logo {
+    display: inline-block;
+    width: 140px;
+    margin-top: 8px;
+    float: left;
+    position: relative;
+    top: auto;
+    z-index: 4;
+  }
+  
+}
+
+@media screen
+  and (min-width: 1200px) 
+  and (max-width: 1600px) {
+  
+  .header__logo {
+    width: 150px;
+    margin-top: 3px;
+  }
+
+  .map-canvas {
+    margin: 60px;
+  }
+}

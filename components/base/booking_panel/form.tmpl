@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+      <form action="#" class="form form--inline booking-panel" method="post">
+        <h2 class="form__heading text-orange text-center">
+          <span class="icon icon--strokes-left"></span> 
+          book my hostel
+          <span class="icon icon--strokes-right"></span>
+        </h2>
+        <fieldset class="form__fieldset">
+          <div class="form__group form__group--select">
+            <label for="hostel" class="form__label form__label--sr-only">Hostel</label>
+            <div class="form__input-group">
+              <label for="hostel-2" class="form__input-group-addon text-blue">
+                <i class="fa fa-bed"></i>
+              </label>
+              <select class="form__control" name="hostel" id="hostel-2">
+                <option value="">Select Hostel</option>
+                <option value="HOSTEL1">Hostel 1</option>
+                <option value="HOSTEL2">Hostel 2</option>
+                <option value="HOSTEL3">Hostel 3</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form__group">
+              <label for="check-in-date-2" class="form__label form__label--sr-only">Check in date</label>
+              <div class="form__input-group">
+                <input type="text" class="form__control has-datepicker" name="check-in-date" id="check-in-date-2" placeholder="Check in date">
+                <label for="check-in-date-1" class="form__input-group-addon">
+                  <i class="fa fa-calendar"></i>
+                </label>
+              </div>
+          </div>
+
+          <div class="form__group">
+              <label for="check-out-date-2" class="form__label form__label--sr-only">Check out date</label>
+              <div class="form__input-group">
+                <input type="text" class="form__control has-datepicker" name="check-out-date" id="check-out-date-2" placeholder="Check out date">
+                <label for="check-out-date-1" class="form__input-group-addon"><i class="fa fa-calendar"></i></label>
+              </div>
+          </div>
+
+          <div class="form__group">
+            <button type="submit" name="check-availability" value="1" class="btn btn--orange btn--hover-green btn--md btn--full-width">Check Availability</button>
+          </div>
+
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>

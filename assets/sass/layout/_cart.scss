@@ -1,0 +1,96 @@
+.cart {
+  margin-bottom: 30px;
+}
+
+.cart__item {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.cart__item-header-cell, 
+.cart__item-cell {
+  vertical-align: middle;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  color: #2d2a27;
+  padding: 7px 10px;
+  border-left: 1px solid #B8B9B7;
+  border-bottom: 1px solid #B8B9B7;
+
+  &:first-child {
+    border-left: none;
+  }
+}
+
+.cart__item-header-cell {
+  background: $white;
+  color: $blue;
+  font-weight: 100;
+  font-family: "museo700";
+}
+
+.cart__item-cell {
+  color: $black;
+}
+
+.cart__item-header-cell.text-left {
+  text-align: left;
+}
+
+
+.cart__item-heading {
+  display: inline-block;
+  color: $black;
+  font-size: 17px;
+  font-family: "museo900";
+}
+
+.cart__item-remove {
+  display: block;
+  cursor: pointer;
+  font-size: 20px;
+  float: right;
+  color: $black;
+  margin: 0 0 0 8px;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+.cart__item-cell-na {
+  color: #bfc0be;
+}
+
+@media screen and (max-width: 767px) {
+  .cart__item {
+    table-layout: initial;
+  }
+  
+  .cart__item-body {
+    display: block;
+    width: 100%;
+
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+
+    .cart__item-row {
+      display: block;
+      width: 50%;
+      float: left;
+    }
+
+    .cart__item-cell,
+    .cart__item-header-cell {
+      display: block;
+      width: 100%;
+      border-left: none;
+    }
+
+  }
+}

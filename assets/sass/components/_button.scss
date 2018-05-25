@@ -1,0 +1,225 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+[href],
+[type="button"],
+[type="submit"],
+button {
+  cursor: pointer;  
+}
+
+.btn,
+.link {
+  display: inline-block;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  
+}
+
+.btn {
+  font-family: 'museo900';
+  cursor: pointer;
+  padding: 0 15px;
+  height: 51px;
+  line-height: 51px;
+  white-space: nowrap;
+  text-align: center;
+  
+  i {
+    font-size: 22px;
+    vertical-align: text-top;
+    margin: 0 5px 0 5px;
+  }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--disabled {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.btn--grunge,
+.btn--grunge-indented {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 0;
+  
+  &:before,
+  &:after {
+    background: graphics-path('sprite.png') 0px 0px;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 51px;
+  }
+  
+  &:before {
+    left: -32px;
+  }
+  
+  &:after {
+    right: -51px;
+  }
+  
+}
+
+.btn--grunge-indented {
+  margin-left: 32px;
+}
+
+.btn--blue,
+.btn--hover-blue:hover {
+  background: $blue;
+  color: #fff;
+  
+  &.btn--grunge:before {
+    background-position: 0 -141px;
+	  width: 33px;
+  }
+  
+  &.btn--grunge:after {
+    background-position: 0 -197px;
+	  width: 52px;
+  }
+  
+}
+
+.btn--green,
+.btn--hover-green:hover {
+  background: $green;
+  color: #fff;
+  
+  &.btn--grunge:before {
+    background-position: 0 -253px;
+	  width: 33px;
+  }
+  
+  &.btn--grunge:after {
+    background-position: 0 -309px;
+	  width: 52px;
+  }
+  
+}
+
+.btn--orange,
+.btn--hover-orange:hover {
+  background: $orange;
+  color: #fff;
+  
+  &.btn--grunge:before {
+    background-position: 0 -365px;
+	  width: 33px;
+  }
+  
+  &.btn--grunge:after {
+    background-position: 0 -421px;
+	  width: 52px;
+  }
+  
+}
+
+.btn--xs {
+  min-width: 185px;
+}
+
+.btn--sm {
+  min-width: 215px;
+}
+
+.btn--md {
+  min-width: 250px;
+}
+
+.btn--lg {
+  min-width: 285px;
+}
+
+.btn--xl {
+  min-width: 315px;
+}
+
+.btn--gutter {
+  margin: 0 0 0 30px;
+}
+
+.btn--full-width {
+  width: 100%;
+}
+
+.link {
+  font-family: 'museo700';
+  color: inherit;
+  text-transform: uppercase;
+  -webkit-transition: all 250ms ease-in-out;
+  -moz-transition: all 250ms ease-in-out;
+  -ms-transition: all 250ms ease-in-out;
+  -o-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+  
+  &:after {
+    content: "";
+    display: inline-block;
+    background: graphics-path('sprite.png') no-repeat 0 -34px;
+  	width: 25px;
+  	height: 10px;
+    vertical-align: text-bottom;
+    font-weight: 700;
+    -webkit-transition: all 250ms ease-in-out;
+    -moz-transition: all 250ms ease-in-out;
+    -ms-transition: all 250ms ease-in-out;
+    -o-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    @include translate(7px, -50%);
+  }
+  
+  &:hover {
+    color: $orange;
+    
+    &:after {
+      @include translate(12px, -50%);
+    }
+  }
+  
+}
+
+.link--blue {
+  color: $blue;
+}
+
+.link--green {
+  color: $green;
+}
+
+.link--orange {
+  color: $orange;
+}
+
+.link--grey {
+  color: $dark-grey;
+}
+
+.link--sm {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .btn,
+  .link {
+    font-size: 18px;
+  }
+  
+  .link--sm {
+    font-size: 16px;
+  }
+  
+}
+@media screen and (max-width: 1200px) {
+
+}

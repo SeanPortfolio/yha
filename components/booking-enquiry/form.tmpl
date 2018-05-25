@@ -1,0 +1,153 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <div class="well">
+        <form action="#" method="post" class="form form--horizontal">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Personal details</legend>
+            
+            <div class="form__group form__group--required">
+              <label for="group-name" class="form__label col-sm-4">Enter group name</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="group-name" id="group-name" placeholder="Enter name" type="text" required>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required form__group--select">
+              <label for="group-type" class="form__label col-sm-4">Group type</label>
+              <div class="col-sm-8">
+                <select class="form__control" name="group-type" id="group-type">
+                  <option value="">Select type</option>
+                  <option value="TYP1">Type 1</option>
+                  <option value="TYP2">Type 2</option>
+                  <option value="TYP2">Type 3</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label for="first-name" class="form__label col-sm-4">Contact person</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="first-name" id="first-name" placeholder="First name" type="text" required>
+              </div>
+            </div>
+            
+            <div class="form__group">
+              <label for="last-name" class="form__label col-sm-4">&nbsp;</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="last-name" id="last-name" placeholder="Last name" type="text" required>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label for="email-address" class="form__label col-sm-4">Email</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="email-address" id="email-address" placeholder="Enter email" type="email" required>
+              </div>
+            </div>
+            
+            <div class="form__group">
+              <label for="phone-number" class="form__label col-sm-4">Phone:</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="phone-number" id="phone-number" placeholder="Enter phone" type="tel">
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label for="total-guests" class="form__label col-sm-4">Total guests</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="total-guests" 
+                id="total-guests" placeholder="Enter guests" type="number" 
+                min="1" required>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label for="total-underage-guests" class="form__label col-sm-4">Total under 18</label>
+              <div class="col-sm-8">
+                <input class="form__control" name="total-underage-guests" 
+                id="total-underage-guests" placeholder="Enter under 18" 
+                type="number" min="0" required>
+              </div>
+            </div>
+
+          </fieldset>
+          <hr class="form__hr">
+          <fieldset class="form__fieldset">
+            <legend class="form__legend">Your Booking Details</legend>
+
+            <!-- build:section layouts.bookingEnquiry.cart -->
+            <!-- /build -->
+            
+            <div class="form__group form__group--required form__group--select">
+              <label for="group-type" class="form__label col-sm-4">Hostel</label>
+              <div class="col-sm-8">
+                <select class="form__control" name="hostel" id="hostel">
+                  <option value="">Select hostel</option>
+                  <option value="HOSTEL1">Hostel 1</option>
+                  <option value="HOSTEL2">Hostel 2</option>
+                  <option value="HOSTEL3">Hostel 3</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label for="arrival-date" class="form__label col-sm-4">Arrival date</label>
+              <div class="col-sm-8">
+                <div class="form__input-group">
+                  <input class="form__control has-datepicker" name="arrival-date" 
+                  id="arrival-date" placeholder="Select date" type="text" 
+                  required>
+                  <label for="arrival-date" class="form__input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label for="departure-date" class="form__label col-sm-4">Departure date</label>
+              <div class="col-sm-8">
+                <div class="form__input-group">
+                  <input class="form__control has-datepicker" name="departure-date" 
+                  id="departure-date" placeholder="Select date" type="text" 
+                  required>
+                  <label for="departure-date" class="form__input-group-addon">
+                    <i class="fa fa-calendar"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form__group form__group--required">
+              <label class="form__label col-sm-4">Are these dates <br>flexible?</label>
+              <div class="col-sm-8">
+                <label class="radio-inline">
+                  <input type="radio" name="flexible-dates" value="1" 
+                  class="radio-inline__input"> 
+                  <span class="radio-inline__icon"></span> Yes
+                </label>
+                
+                <label class="radio-inline">
+                  <input type="radio" name="flexible-dates" value="0" 
+                  class="radio-inline__input"> 
+                  <span class="radio-inline__icon"></span> No
+                </label>
+              </div>
+            </div>
+            
+          </fieldset>
+          <hr class="form__hr">
+          <fieldset class="form__fieldset text-right">
+            <button type="submit" name="request-booking" 
+              class="btn btn--orange btn--hover-blue btn--lg"
+              value="1">
+              Request Group Booking
+            </button>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.container (booking enquiry form)  -->
